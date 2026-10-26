@@ -210,7 +210,9 @@
             border: 1px solid #30363d;
             border-radius: 12px;
             padding: 25px;
+            cursor: pointer;
             transition: 0.3s;
+            position: relative;
         }
 
         .project-card:hover {
@@ -226,6 +228,70 @@
         .project-card p {
             color: #8b949e;
             font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .preview-badge {
+            font-size: 0.8rem;
+            color: #58a6ff;
+            font-weight: 600;
+        }
+
+        /* Modal / Pop-up Window */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 16px;
+            max-width: 700px;
+            width: 100%;
+            padding: 25px;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+        }
+
+        .modal-content h3 {
+            color: #f0f6fc;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .modal-content img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+            margin-bottom: 15px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.8rem;
+            color: #8b949e;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .close-btn:hover {
+            color: #58a6ff;
         }
 
         /* Contact Section */
@@ -336,40 +402,57 @@
     <section id="projects">
         <h2 class="section-title">Solutions & Services</h2>
         <div class="projects-grid">
-            <div class="project-card">
+            <div class="project-card" onclick="openModal('Business Websites', 'download (2).jpeg')">
                 <h3>Business Websites</h3>
                 <p>Professional and high-converting custom business websites.</p>
+                <span class="preview-badge"><i class="fa-solid fa-eye"></i> Click to View Showcase</span>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="openModal('School & College Websites', 'download (2).jpeg')">
                 <h3>School & College Websites</h3>
                 <p>Educational portals with management features.</p>
+                <span class="preview-badge"><i class="fa-solid fa-eye"></i> Click to View Showcase</span>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="openModal('Hospital Management Systems', 'download (2).jpeg')">
                 <h3>Hospital Management Systems</h3>
                 <p>Comprehensive healthcare and patient management software.</p>
+                <span class="preview-badge"><i class="fa-solid fa-eye"></i> Click to View Showcase</span>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="openModal('Restaurant Websites', 'download (2).jpeg')">
                 <h3>Restaurant Websites</h3>
                 <p>Interactive menus and reservation platforms.</p>
+                <span class="preview-badge"><i class="fa-solid fa-eye"></i> Click to View Showcase</span>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="openModal('Inventory Software', 'download (2).jpeg')">
                 <h3>Inventory Software</h3>
                 <p>Smart stock management and tracking applications.</p>
+                <span class="preview-badge"><i class="fa-solid fa-eye"></i> Click to View Showcase</span>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="openModal('Portfolio Websites', 'download (2).jpeg')">
                 <h3>Portfolio Websites</h3>
                 <p>Modern and responsive personal showcase portfolios.</p>
+                <span class="preview-badge"><i class="fa-solid fa-eye"></i> Click to View Showcase</span>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="openModal('E-commerce Websites', 'download (2).jpeg')">
                 <h3>E-commerce Websites</h3>
                 <p>Feature-rich online stores with payment gateway integrations.</p>
+                <span class="preview-badge"><i class="fa-solid fa-eye"></i> Click to View Showcase</span>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="openModal('Learning Platforms', 'download (2).jpeg')">
                 <h3>Learning Platforms</h3>
                 <p>LMS and online course management platforms.</p>
+                <span class="preview-badge"><i class="fa-solid fa-eye"></i> Click to View Showcase</span>
             </div>
         </div>
     </section>
+
+    <!-- Image Showcase Modal -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Project Title</h3>
+            <img id="modalImg" src="" alt="Project Showcase">
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact">
@@ -394,6 +477,27 @@
     <footer>
         <p>&copy; 2026 Obaid Hasan Suad. All Rights Reserved.</p>
     </footer>
+
+    <!-- JavaScript for Pop-up Modal -->
+    <script>
+        function openModal(title, imageSrc) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalImg').src = imageSrc;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of modal content
+        window.onclick = function(event) {
+            var modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
