@@ -323,7 +323,8 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 18px;
             padding: 30px;
-            cursor: pointer;
+            text-decoration: none;
+            display: block;
             transition: 0.3s;
             position: relative;
             overflow: hidden;
@@ -373,7 +374,7 @@
             font-weight: 700;
         }
 
-        /* Modal / Pop-up Window */
+        /* Modal / Pop-up Window for other projects */
         .modal {
             display: none;
             position: fixed;
@@ -571,101 +572,82 @@
     <section id="skills">
         <h2 class="section-title">Core Skills & Technologies</h2>
         <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fa-brands fa-html5"></i>
-                <span>HTML5</span>
-            </div>
-            <div class="skill-card">
-                <i class="fa-brands fa-css3-alt"></i>
-                <span>CSS3</span>
-            </div>
-            <div class="skill-card">
-                <i class="fa-solid fa-layer-group"></i>
-                <span>Bootstrap / Tailwind CSS</span>
-            </div>
-            <div class="skill-card">
-                <i class="fa-brands fa-js"></i>
-                <span>JavaScript</span>
-            </div>
-            <div class="skill-card">
-                <i class="fa-brands fa-github"></i>
-                <span>Git & GitHub</span>
-            </div>
-            <div class="skill-card">
-                <i class="fa-brands fa-react"></i>
-                <span>React.js / Vue.js / Angular</span>
-            </div>
-            <div class="skill-card">
-                <i class="fa-brands fa-node-js"></i>
-                <span>Node.js / Python / PHP</span>
-            </div>
-            <div class="skill-card">
-                <i class="fa-solid fa-database"></i>
-                <span>MySQL / PostgreSQL / MongoDB</span>
-            </div>
-            <div class="skill-card">
-                <i class="fa-solid fa-network-wired"></i>
-                <span>RESTful API / GraphQL</span>
-            </div>
-            <div class="skill-card">
-                <i class="fa-solid fa-cloud-arrow-up"></i>
-                <span>Deployment (Netlify / Vercel / AWS)</span>
-            </div>
-            <div class="skill-card">
-                <i class="fa-solid fa-brain"></i>
-                <span>Problem Solving</span>
-            </div>
+            <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+            <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+            <div class="skill-card"><i class="fa-solid fa-layer-group"></i><span>Bootstrap / Tailwind CSS</span></div>
+            <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+            <div class="skill-card"><i class="fa-brands fa-github"></i><span>Git & GitHub</span></div>
+            <div class="skill-card"><i class="fa-brands fa-react"></i><span>React.js / Vue.js / Angular</span></div>
+            <div class="skill-card"><i class="fa-brands fa-node-js"></i><span>Node.js / Python / PHP</span></div>
+            <div class="skill-card"><i class="fa-solid fa-database"></i><span>MySQL / PostgreSQL / MongoDB</span></div>
+            <div class="skill-card"><i class="fa-solid fa-network-wired"></i><span>RESTful API / GraphQL</span></div>
+            <div class="skill-card"><i class="fa-solid fa-cloud-arrow-up"></i><span>Deployment (Netlify / Vercel / AWS)</span></div>
+            <div class="skill-card"><i class="fa-solid fa-brain"></i><span>Problem Solving</span></div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section (Connected with Netlify Live Links) -->
     <section id="projects">
         <h2 class="section-title">Solutions & Showcase</h2>
         <div class="projects-grid">
-            <div class="project-card" onclick="openModal('Business Websites')">
+            
+            <!-- 1. Restaurant Website -->
+            <a href="https://mojadarrestaurentbd.netlify.app" target="_blank" class="project-card">
+                <h3>Restaurant Websites</h3>
+                <p>Interactive digital menus & reservation web platforms.</p>
+                <span class="preview-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Website</span>
+            </a>
+
+            <!-- 2. Business Websites -->
+            <a href="https://nexustechsolutionsbd.netlify.app" target="_blank" class="project-card">
                 <h3>Business Websites</h3>
                 <p>Professional, fast, and high-converting custom corporate websites.</p>
-                <span class="preview-badge"><i class="fa-solid fa-eye"></i> View Live Showcase</span>
-            </div>
-            <div class="project-card" onclick="openModal('School & College Websites')">
+                <span class="preview-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Website</span>
+            </a>
+
+            <!-- 3. Portfolio Applications -->
+            <a href="https://wanderluxeworld.netlify.app" target="_blank" class="project-card">
+                <h3>Portfolio Applications</h3>
+                <p>Modern, dynamic, and aesthetic personal showcase websites.</p>
+                <span class="preview-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Website</span>
+            </a>
+
+            <!-- 4. Educational Portals -->
+            <a href="https://horizonintsclandclg.netlify.app" target="_blank" class="project-card">
                 <h3>Educational Portals</h3>
                 <p>Smart school management systems with interactive portals.</p>
-                <span class="preview-badge"><i class="fa-solid fa-eye"></i> View Live Showcase</span>
-            </div>
+                <span class="preview-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Website</span>
+            </a>
+
+            <!-- Other Projects (Popup Notification) -->
             <div class="project-card" onclick="openModal('Hospital Management Systems')">
                 <h3>Hospital Systems</h3>
                 <p>Comprehensive healthcare & patient management platforms.</p>
                 <span class="preview-badge"><i class="fa-solid fa-eye"></i> View Live Showcase</span>
             </div>
-            <div class="project-card" onclick="openModal('Restaurant Websites')">
-                <h3>Restaurant Websites</h3>
-                <p>Interactive digital menus & reservation web platforms.</p>
-                <span class="preview-badge"><i class="fa-solid fa-eye"></i> View Live Showcase</span>
-            </div>
+
             <div class="project-card" onclick="openModal('Inventory Software')">
                 <h3>Inventory Software</h3>
                 <p>Smart real-time stock management & tracking tools.</p>
                 <span class="preview-badge"><i class="fa-solid fa-eye"></i> View Live Showcase</span>
             </div>
-            <div class="project-card" onclick="openModal('Portfolio Applications')">
-                <h3>Portfolio Applications</h3>
-                <p>Modern, dynamic, and aesthetic personal showcase websites.</p>
-                <span class="preview-badge"><i class="fa-solid fa-eye"></i> View Live Showcase</span>
-            </div>
+
             <div class="project-card" onclick="openModal('E-commerce Stores')">
                 <h3>E-commerce Stores</h3>
                 <p>Full-featured online stores with payment gateway integrations.</p>
                 <span class="preview-badge"><i class="fa-solid fa-eye"></i> View Live Showcase</span>
             </div>
+
             <div class="project-card" onclick="openModal('Learning Platforms')">
                 <h3>Learning Platforms</h3>
                 <p>LMS and online course management web platforms.</p>
                 <span class="preview-badge"><i class="fa-solid fa-eye"></i> View Live Showcase</span>
             </div>
+
         </div>
     </section>
 
-    <!-- Showcase Modal (Replaced old image with clean info box) -->
+    <!-- Showcase Modal -->
     <div class="modal" id="imageModal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -682,7 +664,6 @@
         <div class="contact-container">
             <p>Have a project in mind or need custom full-stack solutions? Send a message directly or connect via social links.</p>
             
-            <!-- Direct Message Form -->
             <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent successfully.');">
                 <div class="form-group">
                     <input type="text" placeholder="Your Name" required>
@@ -697,15 +678,9 @@
             </form>
 
             <div class="contact-links">
-                <a href="mailto:workofficiallyfor@gmail.com" class="contact-btn">
-                    <i class="fa-solid fa-envelope" style="color: #00f2fe;"></i> Email
-                </a>
-                <a href="https://www.facebook.com/share/18d8m29JRk/" target="_blank" class="contact-btn">
-                    <i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook
-                </a>
-                <a href="https://www.linkedin.com/in/obaid-hasan-suad-46aa6b37a" target="_blank" class="contact-btn">
-                    <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i> LinkedIn
-                </a>
+                <a href="mailto:workofficiallyfor@gmail.com" class="contact-btn"><i class="fa-solid fa-envelope" style="color: #00f2fe;"></i> Email</a>
+                <a href="https://www.facebook.com/share/18d8m29JRk/" target="_blank" class="contact-btn"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook</a>
+                <a href="https://www.linkedin.com/in/obaid-hasan-suad-46aa6b37a" target="_blank" class="contact-btn"><i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i> LinkedIn</a>
             </div>
         </div>
     </section>
@@ -715,7 +690,7 @@
         <p>&copy; 2026 StackFusion. Powered by Full Stack Developer expertise. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript for Modal -->
+    <!-- JavaScript -->
     <script>
         function openModal(title) {
             document.getElementById('modalTitle').innerText = title;
